@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Top 5 Foods</title>
+</head>
+<body>
+    <h1>Top 5 Foods</h1>
+    <p><em>Food is one of my favorite things in life!</em> Here are my top 5 choices.</p>
+
+    <h2>1. Chicken and Fries</h2>
+    <p><strong>Very tasty and never gonna let you down</strong> – I love fried/crispy the most.</p>
+
+    <h2>2. Tacos</h2>
+    <p>Perfect mix of <em> juicy and fresh</em> flavors.</p>
+
+    <h2>3. Pasta</h2>
+    <p>Tasteful, exquisite, and goes well with garlic bread.</p>
+
+    <h2>4. Sushi</h2>
+    <p>Healthy, fresh, and fun to eat.</p>
+
+    <h2>5. Yams</h2>
+    <p>Sweet and saucy.</p>
+
+    <h3>Quick List:</h3>
+    <ul>
+        <li>Chicken and Fries</li>
+        <li>Tacos</li>
+        <li>Pasta</li>
+        <li>Sushi</li>
+        <li>Yams</li>
+    </ul>
+
+    <h3>Want to know more about food?</h3>
+    <p>Check out <a href="https://www.foodnetwork.com" target="_blank">Food Network</a>.</p>
+
+    <h3>Here’s a food image:</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Pizza_on_stone.jpg" alt="Pizza" width="300">
+</body>
+</html>

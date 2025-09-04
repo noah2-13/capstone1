@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Noah’s Webring</title>
+
+  <style>
+    body { 
+      background: #111;       /* custom background color */
+      color: #f2f2f2;         /* main text color */
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 { color: #7ee787; }     /* text color 2 */
+    .muted { color: #9da7b3; } /* text color 3 */
+    img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; }
+    blockquote { border-left: 4px solid #7ee787; padding: 8px 12px; background: #1a1a1a; }
+    pre { background: #000; padding: 10px; }
+    .player { width: 100%; max-width: 560px; height: 315px; border: 0; }
+    a { color: #7ee787; }
+  </style>
+</head>
+<body>
+
+  <!-- 1) NAME + PRONOUNS in H1 -->
+  <h1>Noah T. (he/him)</h1>
+  <p class="muted">welcome to my webring page</p>
+
+  <!-- 2) AVATAR -->
+  <img src="https://picsum.photos/300" alt="My avatar">
+
+  <hr>
+
+  <!-- 3) SHORT POEM / LYRICS -->
+  <blockquote>
+    “I’m tryna be here for a reason, not just a season.”
+    <br><span class="muted">— favorite lyric</span>
+  </blockquote>
+
+  <!-- 4) ASCII ART (basketball) -->
+  <pre>
+   ____
+  / __ \
+ ( (__) )
+  \____/
+  </pre>
+
+  <!-- 5) EMBEDDED PLAYER -->
+  <iframe class="player"
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+
+  <!-- Optional webring links -->
+  <p>
+    <a href="https://example1.github.io/capstone/webring.html" target="_blank">prev site</a> |
+    <a href="https://example2.github.io/capstone/webring.html" target="_blank">next site</a>
+  </p>
+
+  <hr>
+
+  <p class="muted">© 2025 Noah T. • school-appropriate content only</p>
+
+</body>
+</html>

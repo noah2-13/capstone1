@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wings & Fries Club – Sign Up</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Arial, sans-serif; line-height: 1.4; }
+    h1 { margin-bottom: 6px; }
+    .hint { color: #555; font-size: 0.95rem; margin-top: -6px; margin-bottom: 14px; }
+    label { display: block; margin: 10px 0 4px; }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea { width: 320px; max-width: 100%; padding: 8px; }
+    fieldset { border: 1px solid #ddd; padding: 12px; margin: 12px 0; }
+    legend { padding: 0 6px; }
+    .row { margin: 8px 0; }
+    .actions { margin-top: 14px; }
+    img { display: block; margin: 16px 0; width: 260px; }
+    a.club-link { background: purple; color: black; padding: 2px 6px; text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <h1>Wings & Fries Club</h1>
+  <p class="hint">Join our extremely serious, totally silly club.</p>
+
+  <!-- image + anchor practice -->
+  <a class="club-link" href="https://example.com/club-info" target="_blank" rel="noopener">
+    Club info (opens in new tab)
+  </a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Chicken_wings_and_French_fries.jpg"
+       alt="Plate of wings and fries">
+
+  <!-- FORM -->
+  <!-- GET sends your form data in the URL so you can see name=value pairs easily while learning -->
+  <form action="/signup-demo" method="get">
+    <!-- TEXT -->
+    <label for="fullName">Full name</label>
+    <input type="text" id="fullName" name="fullName" placeholder="Jordan Hooper" required>
+
+    <!-- EMAIL -->
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <!-- PASSWORD -->
+    <label for="password">Secret sauce password</label>
+    <input type="password" id="password" name="password" placeholder="••••••••" required>
+
+    <!-- RADIO GROUP -->
+    <fieldset>
+      <legend>Favorite wing heat level (radio = pick ONE)</legend>
+      <div class="row">
+        <label><input type="radio" name="heat" value="mild" checked> Mild</label>
+        <label><input type="radio" name="heat" value="medium"> Medium</label>
+        <label><input type="radio" name="heat" value="spicy"> Spicy</label>
+      </div>
+    </fieldset>
+
+    <!-- CHECKBOX(ES) -->
+    <fieldset>
+      <legend>Perks you want (checkbox = pick MANY)</legend>
+      <div class="row">
+        <label><input type="checkbox" name="perks" value="stickers" checked> Stickers</label>
+        <label><input type="checkbox" name="perks" value="coupons"> Coupons</label>
+        <label><input type="checkbox" name="perks" value="tastings"> Friday tastings</label>
+      </div>
+    </fieldset>
+
+    <!-- SELECT -->
+    <label for="fryCut">Favorite fry cut (select)</label>
+    <select id="fryCut" name="fryCut">
+      <option value="crinkle">Crinkle</option>
+      <option value="shoestring">Shoestring</option>
+      <option value="waffle">Waffle</option>
+      <option value="curly">Curly</option>
+    </select>
+
+    <!-- TEXTAREA -->
+    <label for="notes">Special requests (textarea)</label>
+    <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Any dipping sauce requests?"></textarea>
+
+    <!-- SUBMIT -->
+    <div class="actions">
+      <input type="submit" value="Join the Club">
+    </div>
+  </form>
+
+</body>
+</html>

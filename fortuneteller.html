@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fortune Teller</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Arial, sans-serif; line-height: 1.35; padding: 16px; }
+    img.hero { display:block; width: 280px; max-width: 90%; margin: 0 0 12px; }
+    label { display:block; margin: 10px 0 4px; }
+    input, select, textarea { width: 320px; max-width: 100%; padding: 8px; }
+    fieldset { border: 1px solid #ddd; padding: 10px; margin: 10px 0; }
+    .actions { margin-top: 12px; }
+    #result { margin-top: 16px; font-weight: 600; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+  <!-- image at top -->
+  <img class="hero" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Crystal_ball.jpg"
+       alt="Crystal ball">
+
+  <h1>Fortune Teller</h1>
+  <p>Fill this out and meet your destiny ✨</p>
+
+  <!-- the form -->
+  <form id="fortune-form">
+    <label for="fullName">Your name</label>
+    <input type="text" id="fullName" name="fullName" placeholder="Jordan Hooper" required>
+
+    <label for="favNumber">Favorite number</label>
+    <input type="number" id="favNumber" name="favNumber" min="0" max="999">
+
+    <label for="luckyColor">Lucky color</label>
+    <input type="color" id="luckyColor" name="luckyColor" value="#7f5af0">
+
+    <label for="bigDay">Big day</label>
+    <input type="date" id="bigDay" name="bigDay">
+
+    <label for="vibe">Choose your current vibe</label>
+    <select id="vibe" name="vibe">
+      <option value="locked-in">Locked in</option>
+      <option value="chill">Chill</option>
+      <option value="adventurous">Adventurous</option>
+    </select>
+
+    <label for="wish">Tell me a wish</label>
+    <textarea id="wish" name="wish" rows="4" cols="40"
+      placeholder="What are you hoping for?"></textarea>
+
+    <div class="actions">
+      <input type="submit" value="Reveal my fortune">
+    </div>
+  </form>
+
+  <p id="result"></p>
+
+  <!-- script all in same file -->
+  <script>
+    // fortunes (customize these!)
+    const FORTUNES = [
+      "You’ll hit a new PR—on court and in life.",
+      "A surprise text opens a big opportunity.",
+      "Your consistency this week pays off big time.",
+      "A mentor notices your work ethic—doors open.",
+      "Rest and recovery unlock your next level.",
+      "Your creativity turns a small idea into a win.",
+      "You’ll meet someone who expands your vision."
+    ];
+
+    // simple string hash
+    function hashString(str) {
+      let h = 2166136261 >>> 0;
+      for (let i = 0; i < str.length; i++) {
+        h ^= str.charCodeAt(i);
+        h = Math.imul(h, 16777619);
+      }
+      return h >>> 0;
+    }
+
+    // seeded random number generator
+    function seededRandom(seed) {
+      let x = seed || 123456789;
+      x ^= x << 13; x >>>= 0;
+      x ^= x >> 17; x >>>= 0;
+      x ^= x << 5;  x >>>= 0;
+      return (x >>> 0) / 4294967296;
+    }
+
+    // form submit listener
+    document.getElementById("fortune-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const fd = new FormData(e.target);
+      const parts = [];
+      for (const [name, value] of fd.entries()) {
+        parts.push(`${name}=${value}`);
+      }
+
+      const seed = hashString(parts.join("&"));
+      const r = seededRandom(seed);
+      const idx = Math.floor(r * FORTUNES.length);
+      const fortune = FORTUNES[idx];
+
+      document.getElementById("result").textContent = `🔮 ${fortune}`;
+    });
+  </script>
+</body>
+</html>

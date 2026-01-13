@@ -1,0 +1,22 @@
+DOCTYPE html>
+<html>
+ <head>
+   <title>Noah's Winter Break</title>
+
+
+   <!-- Link to CSS -->
+   <link rel="stylesheet" href="style.css">
+ </head>
+
+
+ <body>
+   <h1 id="main-title">Noah's Winter Break</h1>
+
+
+   <p>
+     This winter break was productive and relaxing. I spent time with my
+     family, listened to a lot of music, and focused on improving my skills.
+     I also had time to rest and prepare for the next semester.
+   </p>
+ </body>
+</html>

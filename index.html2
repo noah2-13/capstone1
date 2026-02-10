@@ -1,22 +1,49 @@
-DOCTYPE html>
-<html>
- <head>
-   <title>Noah's Winter Break</title>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lost Thing Poster</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
 
-   <!-- Link to CSS -->
-   <link rel="stylesheet" href="style.css">
- </head>
+  <body>
 
+    <!-- Container (Requirement #1) -->
+    <div class="container mt-5">
 
- <body>
-   <h1 id="main-title">Noah's Winter Break</h1>
+      <div class="container mt-4">
 
+  <h1 class="text-center mb-4">Which NBA Player Are You?</h1>
 
-   <p>
-     This winter break was productive and relaxing. I spent time with my
-     family, listened to a lot of music, and focused on improving my skills.
-     I also had time to rest and prepare for the next semester.
-   </p>
- </body>
-</html>
+  <!-- ROW 1 -->
+  <div class="row mb-3">
+    <div class="col border p-3 text-center bg-light">
+      <img src="https://picsum.photos/200" class="img-fluid mb-2">
+      <p>Scorer</p>
+    </div>
+
+    <div class="col border p-3 text-center bg-light">
+      <img src="https://picsum.photos/201" class="img-fluid mb-2">
+      <p>Playmaker</p>
+    </div>
+  </div>
+
+  <!-- ROW 2 -->
+  <div class="row">
+    <div class="col border p-3 text-center bg-light">
+      <img src="https://picsum.photos/202" class="img-fluid mb-2">
+      <p>Defender</p>
+    </div>
+
+    <div class="col border p-3 text-center bg-light">
+      <img src="https://picsum.photos/203" class="img-fluid mb-2">
+      <p>Leader</p>
+    </div>
+  </div>
+
+</div>
+
+4

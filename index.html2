@@ -1,49 +1,181 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lost Thing Poster</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
+  <title>Lost Thing Poster</title>
 
-    <!-- Container (Requirement #1) -->
-    <div class="container mt-5">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
 
-      <div class="container mt-4">
+<body>
 
-  <h1 class="text-center mb-4">Which NBA Player Are You?</h1>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-  <!-- ROW 1 -->
-  <div class="row mb-3">
-    <div class="col border p-3 text-center bg-light">
-      <img src="https://picsum.photos/200" class="img-fluid mb-2">
-      <p>Scorer</p>
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">Beats4Me</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <!-- Home -->
+          <li class="nav-item">
+            <a class="nav-link active" href="#top">Home</a>
+          </li>
+
+          <!-- Section -->
+          <li class="nav-item">
+            <a class="nav-link" href="#poster">Poster</a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown">
+              Links
+            </a>
+
+            <ul class="dropdown-menu">
+
+              <li>
+                <a class="dropdown-item" href="https://google.com">Google</a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="https://youtube.com">YouTube</a>
+              </li>
+
+            </ul>
+
+          </li>
+
+          <!-- Disabled -->
+          <li class="nav-item">
+            <a class="nav-link disabled">Coming Soon</a>
+          </li>
+
+        </ul>
+
+      </div>
+
     </div>
 
-    <div class="col border p-3 text-center bg-light">
-      <img src="https://picsum.photos/201" class="img-fluid mb-2">
-      <p>Playmaker</p>
+  </nav>
+
+
+  <!-- TOP ANCHOR -->
+  <div id="top"></div>
+
+
+  <!-- MAIN CONTENT -->
+  <div class="container mt-5" id="poster">
+
+
+    <!-- Title -->
+    <h1 class="display-3 text-center text-primary mb-4 border-bottom pb-3">
+      LOST: My Motivation
+    </h1>
+
+
+    <!-- Carousel -->
+    <div id="lostCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/800/300?random=1"
+            class="d-block w-100">
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://picsum.photos/800/300?random=2"
+            class="d-block w-100">
+        </div>
+
+        <div class="carousel-item">
+          <img src="https://picsum.photos/800/300?random=3"
+            class="d-block w-100">
+        </div>
+
+      </div>
+
     </div>
+
+
+    <!-- Border Box -->
+    <div class="border border-warning p-3 mb-4">
+
+      <p class="text-center">
+        Last seen procrastinating and listening to music instead of doing homework.
+      </p>
+
+    </div>
+
+
+    <!-- Buttons -->
+    <div class="text-center mb-4">
+
+      <a href="https://google.com"
+        class="btn btn-success btn-lg me-2 active">
+        Found It
+      </a>
+
+      <a href="https://youtube.com"
+        class="btn btn-danger btn-lg disabled">
+        Still Missing
+      </a>
+
+    </div>
+
+
+    <!-- Form -->
+    <form class="border p-4 mb-5">
+
+      <h4 class="mb-3">Report a Sighting</h4>
+
+      <div class="mb-3">
+
+        <label class="form-label">Your Name</label>
+
+        <input type="text" class="form-control">
+
+      </div>
+
+
+      <div class="mb-3">
+
+        <label class="form-label">Where did you see it?</label>
+
+        <input type="text" class="form-control">
+
+      </div>
+
+
+      <button class="btn btn-primary">
+        Submit
+      </button>
+
+    </form>
+
+
   </div>
 
-  <!-- ROW 2 -->
-  <div class="row">
-    <div class="col border p-3 text-center bg-light">
-      <img src="https://picsum.photos/202" class="img-fluid mb-2">
-      <p>Defender</p>
-    </div>
 
-    <div class="col border p-3 text-center bg-light">
-      <img src="https://picsum.photos/203" class="img-fluid mb-2">
-      <p>Leader</p>
-    </div>
-  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-</div>
+</body>
 
-4
+</html>
